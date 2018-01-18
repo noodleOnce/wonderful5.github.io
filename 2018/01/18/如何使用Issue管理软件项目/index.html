@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="项目管理," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="作者:阮一峰 阅读原文  软件开发（尤其是商业软件）离不开项目管理，Issue 是最通用的管理工具之一。 本文介绍 Issue 的基本用法。">
+<meta name="keywords" content="项目管理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(转载)如何使用Issue管理软件项目">
+<meta property="og:url" content="https://wonderful5.github.io/2018/01/18/如何使用Issue管理软件项目/index.html">
+<meta property="og:site_name" content="wonderful.WCH.blog">
+<meta property="og:description" content="作者:阮一峰 阅读原文  软件开发（尤其是商业软件）离不开项目管理，Issue 是最通用的管理工具之一。 本文介绍 Issue 的基本用法。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082404.jpg">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082403.jpg">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082418.jpg">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082425.jpg">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082426.png">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082405.png">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082427.jpg">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082406.png">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082402.jpg">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082407.png">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082408.png">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082409.png">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082428.png">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082410.png">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082429.png">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082430.png">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082431.png">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082411.jpg">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082412.jpg">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082414.png">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082415.png">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082416.png">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082432.jpg">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082417.jpg">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082440.jpg">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082435.jpg">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082436.jpg">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082434.jpg">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082437.jpg">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082421.png">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082439.png">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082422.jpg">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082424.jpg">
+<meta property="og:updated_time" content="2018-01-17T08:26:16.758Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="(转载)如何使用Issue管理软件项目">
+<meta name="twitter:description" content="作者:阮一峰 阅读原文  软件开发（尤其是商业软件）离不开项目管理，Issue 是最通用的管理工具之一。 本文介绍 Issue 的基本用法。">
+<meta name="twitter:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082404.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://wonderful5.github.io/2018/01/18/如何使用Issue管理软件项目/"/>
+
+
+
+
+
+  <title>(转载)如何使用Issue管理软件项目 | wonderful.WCH.blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">wonderful.WCH.blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">汪崇虎的个人博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wonderful5.github.io/2018/01/18/如何使用Issue管理软件项目/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wonderful">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://wx1.sinaimg.cn/mw1024/93e5a6afgy1fnhfdhk9g9j20p00gk76h.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wonderful.WCH.blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">(转载)如何使用Issue管理软件项目</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-18T00:00:00+08:00">
+                2018-01-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/转载/" itemprop="url" rel="index">
+                    <span itemprop="name">转载</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/01/18/如何使用Issue管理软件项目/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/01/18/如何使用Issue管理软件项目/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/01/18/如何使用Issue管理软件项目/" class="leancloud_visitors" data-flag-title="(转载)如何使用Issue管理软件项目">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>作者:阮一峰 <a href="http://www.ruanyifeng.com/blog/2017/08/issue.html" target="_blank" rel="noopener">阅读原文</a></p>
+</blockquote>
+<p>软件开发（尤其是商业软件）离不开项目管理，Issue 是最通用的管理工具之一。</p>
+<p>本文介绍 Issue 的基本用法。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082404.jpg" alt="img"></p>
+<a id="more"></a>
+<h2 id="一、Issue-是什么？"><a href="#一、Issue-是什么？" class="headerlink" title="一、Issue 是什么？"></a>一、Issue 是什么？</h2><p>Issue 指的是一项待完成的工作，通常与系统的改进相关，中文可以译为”问题”或”事务”。下面这些都是 Issue 的例子。</p>
+<blockquote>
+<ul>
+<li>一个软件的 bug</li>
+<li>一项功能建议</li>
+<li>一项待完成的任务</li>
+<li>文档缺失的报告</li>
+</ul>
+</blockquote>
+<p>每个 Issue 应该包含该问题的所有信息和历史，使得后来的人只看这个 Issue，就能了解问题的所有方面和过程。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082403.jpg" alt="img"></p>
+<p>历史上，Issue 起源于客服部门。用户打电话反映问题，客服就创建一个工单（ticket），后续的每一个处理步骤、每一次与用户的交流，都要更新工单，记录全部信息。这就是 Issue 的前身。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082418.jpg" alt="img"></p>
+<p>因此，Issue 的原始功能是问题追踪和工单管理，后来不断扩展，逐渐演变成全功能的项目管理工具，还可以用于制定和实施软件的开发计划。</p>
+<p>除了软件，其他项目也可以使用 Issue，比如有人把自己住宅的<a href="https://github.com/frabcus/house/issues?q=is%3Aissue+is%3Aclosed" target="_blank" rel="noopener">改善计划</a>都做成了 Issue。</p>
+<h2 id="二、Issue-跟踪管理系统"><a href="#二、Issue-跟踪管理系统" class="headerlink" title="二、Issue 跟踪管理系统"></a>二、Issue 跟踪管理系统</h2><p>专门管理 Issue 的软件，叫做 <a href="https://en.wikipedia.org/wiki/Issue_tracking_system" target="_blank" rel="noopener">Issue 跟踪管理系统</a>（Issue tracking system）。它面向所有人，普通用户也可以使用。</p>
+<p>还有一种 <a href="https://en.wikipedia.org/wiki/Bug_tracking_system" target="_blank" rel="noopener">Bug 跟踪管理系统</a>，通常只面向开发者，比如下图的 Bugzilla。它和 Issue 系统可以同时使用，但是也可以被 Issue 系统取代。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082425.jpg" alt="img"></p>
+<p>一般来说，Issue 跟踪管理系统应该具有以下功能。</p>
+<blockquote>
+<ul>
+<li>项目管理<br>　　- 指定 Issue 的优先级<br>　　- 指定 Issue 所在的阶段<br>　　- 分配负责 Issue 的处理人员<br>　　- 制定日程<br>　　- 监控进度，提供统计</li>
+<li>团队合作<br>　　- 讨论<br>　　- 邮件通知</li>
+<li>代码管理<br>　　- 将 Issue 关联源码<br>　　- 将 Issue 关联代码提交与合并</li>
+</ul>
+</blockquote>
+<h2 id="三、Github-Issues"><a href="#三、Github-Issues" class="headerlink" title="三、Github Issues"></a>三、Github Issues</h2><p>目前，最出名的 Issue 跟踪管理系统是 <a href="https://www.atlassian.com/software/jira" target="_blank" rel="noopener">JIRA</a>。它是一个收费软件，这里就不介绍了。下面通过免费的 <a href="https://guides.github.com/features/issues/" target="_blank" rel="noopener">Github Issues</a>，来介绍如何使用 Issue。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082426.png" alt="img"></p>
+<h3 id="3-1-基本用法"><a href="#3-1-基本用法" class="headerlink" title="3.1 基本用法"></a>3.1 基本用法</h3><p>每个 Github 代码仓库都有一个 Issues 面板。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082405.png" alt="img"></p>
+<p>进入该面板，点击”New Issue”按钮，就可以新建 Issue。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082427.jpg" alt="img"></p>
+<p>上图是新建 Issue 的界面，左侧填入 Issue 的标题和内容，右侧是四个配置项（只有项目管理者才能看到）。</p>
+<blockquote>
+<ul>
+<li>Assignees：人员</li>
+<li>Labels：标签</li>
+<li>Projects：项目</li>
+<li>Milestone：里程碑</li>
+</ul>
+</blockquote>
+<p>下面，一个个介绍这些配置项。</p>
+<h3 id="3-2-Assignee"><a href="#3-2-Assignee" class="headerlink" title="3.2 Assignee"></a>3.2 Assignee</h3><p>Assignee 选择框用于从当前仓库的所有成员之中，指派某个 Issue 的处理人员。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082406.png" alt="img"></p>
+<p>下拉框里面单击人名即可。</p>
+<h3 id="3-3-Labels"><a href="#3-3-Labels" class="headerlink" title="3.3 Labels"></a>3.3 Labels</h3><p>Issue 可以贴上标签，这样有利于分类管理和过滤查看。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082402.jpg" alt="img"></p>
+<p>新建标签，要在 Issues 面板的首页，点击 Labels 按钮。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082407.png" alt="img"></p>
+<p>这时，会显示六个默认的标签。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082408.png" alt="img"></p>
+<p>如果想新建更多的标签，可以点击 New label 按钮。然后，填写标签名，选择标签颜色。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082409.png" alt="img"></p>
+<h3 id="3-4-常用-Label"><a href="#3-4-常用-Label" class="headerlink" title="3.4 常用 Label"></a>3.4 常用 Label</h3><p>对于大型项目， 每个 Issue 至少应该有两个 Label ，一个表示性质，另一个表示优先级。</p>
+<p>表示性质的 Label，可以参考<a href="https://robinpowered.com/blog/best-practice-system-for-organizing-and-tagging-github-issues/" target="_blank" rel="noopener">这篇文章</a>的范例。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082428.png" alt="img"></p>
+<p>表示优先级的 Label，可以采用下面的级别。</p>
+<blockquote>
+<ul>
+<li><strong>高优先级</strong>（High）：对系统有重大影响，只有解决它之后，才能去完成其他任务。</li>
+<li><strong>普通优先级</strong>（Medium）：对系统的某个部分有影响，用户的一部分操作会达不到预期效果。</li>
+<li><strong>低优先级</strong>（Low）：对系统的某个部分有影响，用户几乎感知不到。</li>
+<li><strong>微不足道</strong>（Trivial）：对系统的功能没有影响，通常是视觉效果不理想，比如字体和颜色不满意。</li>
+</ul>
+</blockquote>
+<h3 id="3-5-Milestone"><a href="#3-5-Milestone" class="headerlink" title="3.5 Milestone"></a>3.5 Milestone</h3><p>Milestone 叫做”里程碑”，用作 Issue 的容器，相关 Issue 可以放在一个 Milestone 里面。常见的例子是不同的版本（version）和迭代（sprint），都可以做成 Milestone。</p>
+<p>新建 Milestone，要在 Issues 面板的首页，点击 Milestones 按钮。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082410.png" alt="img"></p>
+<p>这时，再接着点击 New milestone 按钮，然后填写 Milestone 的名称和内容，还可以指定到期时间。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082429.png" alt="img"></p>
+<h3 id="3-6-全局视图"><a href="#3-6-全局视图" class="headerlink" title="3.6 全局视图"></a>3.6 全局视图</h3><p>Issues 面板只能查看和操作当前仓库，Github 还提供全局视图，让用户查看和操作所有与自己相关的 Issue。</p>
+<p>访问 <a href="https://github.com/issues" target="_blank" rel="noopener">github.com/issues</a> 这个网址，就可以打开全局视图。里面的 Issue 分成三类。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082430.png" alt="img"></p>
+<blockquote>
+<ul>
+<li>Created：你创建的 Issue</li>
+<li>Assigned：分配给你的 Issue</li>
+<li>Mentioned：提及你的 Issue</li>
+</ul>
+</blockquote>
+<p>Created 和 Assigned 的含义显而易见，Mentioned 是指他人在 Issue 里面 @ 了你。下面是一个例子。</p>
+<blockquote>
+<p>It looks like the new widget form is broken on Safari. When I try and create the widget, Safari crashes. This is reproducible on 10.8, but not 10.9. Maybe a browser bug?</p>
+<p>/cc @kneath @jresig</p>
+</blockquote>
+<p>全局视图还提供了搜索、过滤和排序功能。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082431.png" alt="img"></p>
+<h2 id="四、看板功能"><a href="#四、看板功能" class="headerlink" title="四、看板功能"></a>四、看板功能</h2><h3 id="4-1-看板是什么？"><a href="#4-1-看板是什么？" class="headerlink" title="4.1 看板是什么？"></a>4.1 看板是什么？</h3><p><a href="https://en.wikipedia.org/wiki/Kanban_%28development%29" target="_blank" rel="noopener">看板</a>（kanban）是敏捷开发的重要手段，主要用于项目的进度管理。所有需要完成的任务，都做成卡片，贴在一块白板上面，这就是看板。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082411.jpg" alt="img"></p>
+<p>按照不同的阶段，看板分成若干列。上图是一种常见的分法，将项目周期分成三列。</p>
+<blockquote>
+<ul>
+<li>Todo （待开发）</li>
+<li>Doing （开发中）</li>
+<li>Done （已完成）</li>
+</ul>
+</blockquote>
+<p>你可以根据实际情况，分出更多的列。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082412.jpg" alt="img"></p>
+<blockquote>
+<ul>
+<li>Todo （待安排）</li>
+<li>Plan （计划）</li>
+<li>Develop （开发）</li>
+<li>Test （测试）</li>
+<li>Deploy （部署）</li>
+<li>Done （已完成）</li>
+</ul>
+</blockquote>
+<h3 id="4-2-Github-的看板功能"><a href="#4-2-Github-的看板功能" class="headerlink" title="4.2 Github 的看板功能"></a>4.2 Github 的看板功能</h3><p>Github 提供 Issue 看板。首先，在仓库首页进入 Projects 面板。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082414.png" alt="img"></p>
+<p>然后，点击 New Project 按钮，新建一个 Project，比如”2.0 版”。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082415.png" alt="img"></p>
+<p>接着，点击 Add column 按钮，为该项目新建若干列。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082416.png" alt="img"></p>
+<p>最后，将 Issue 分配到对应的列，就新建成功了一个看板视图。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082432.jpg" alt="img"></p>
+<p>Issue 可以从一列拖到另一列，表示从一个阶段进入另一个阶段。</p>
+<p>许多<a href="https://github.com/marketplace/category/project-management" target="_blank" rel="noopener">第三方工具</a>可以增强 Github 的看板功能，最著名的是 <a href="https://github.com/marketplace/zenhub" target="_blank" rel="noopener">Zenhub</a>，这里就不详细介绍了。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082417.jpg" alt="img"></p>
+<h2 id="五、码云的-Issue-系统"><a href="#五、码云的-Issue-系统" class="headerlink" title="五、码云的 Issue 系统"></a>五、码云的 Issue 系统</h2><p>除了 Github 以外，<a href="https://gitlab.com/" target="_blank" rel="noopener">Gitlab</a> 也提供免费的 Issues 管理系统，而且 比前者更易用。但是，我不打算介绍它，而是想介绍<a href="http://www.oschina.net/" target="_blank" rel="noopener">开源中国社区</a>推出的代码托管服务<a href="https://gitee.com/" target="_blank" rel="noopener">码云</a>（<a href="https://gitee.com/" target="_blank" rel="noopener">Gitee.com</a>）。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082440.jpg" alt="img"></p>
+<p><a href="https://gitee.com/" target="_blank" rel="noopener">码云</a>是 Gitlab 的深度定制，提供汉语界面，符合国人的使用习惯，并且访问速度极快，我感觉比 Gitlab 快了一个数量级。另一方面，开源中国的红薯老大一直支持我，我也想借这个机会，推广一下他们的产品，让更多的人知道这个优秀的国产 SaaS 服务。</p>
+<h3 id="5-1-新建-Issue"><a href="#5-1-新建-Issue" class="headerlink" title="5.1 新建 Issue"></a>5.1 新建 Issue</h3><p>码云的每个仓库都有一个 <a href="https://gitee.com/moce-technology_demo/jfinal/issues" target="_blank" rel="noopener">Issues 面板</a>。进入后，点击新建 Issue，就可以创建 Issue 了，里面的设置项比 Github 丰富好多。（注意，只有仓库的管理员才能看到设置项。）</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082435.jpg" alt="img"></p>
+<p>其中的”负责人”（Assignee）、”标签”（Label）、”里程碑”（Milestone）与 Github 完全一致。”关联分支”指定 Issue 归属于哪一个分支，”开始时间”和”结束时间”指定处理日程。”置顶选项”指定哪些 Issue 出现在最前面，而且还分成高中低三档。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082436.jpg" alt="img"></p>
+<p>由于设置多，所以 Issue 列表提供的过滤开关也多。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082434.jpg" alt="img"></p>
+<h3 id="5-2-看板功能"><a href="#5-2-看板功能" class="headerlink" title="5.2 看板功能"></a>5.2 看板功能</h3><p>码云的<a href="https://gitee.com/moce-technology_demo/jfinal/board" target="_blank" rel="noopener">看板功能</a>比 Github 更友好，直接提供四个现成的看板。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082437.jpg" alt="img"></p>
+<blockquote>
+<ul>
+<li>待处理</li>
+<li>进行中</li>
+<li>已完成</li>
+<li>已验收</li>
+</ul>
+</blockquote>
+<p>所有 Issue 的初始状态都是”待处理”，用户可以手动把它们拖到其他列。</p>
+<h3 id="5-3-企业版"><a href="#5-3-企业版" class="headerlink" title="5.3 企业版"></a>5.3 企业版</h3><p>码云跟 Gitlab 一样，也提供<a href="https://gitee.com/enterprises" target="_blank" rel="noopener">企业版</a>。里面的<a href="http://git.oschina.net/hesheng168/dashboard/issues" target="_blank" rel="noopener">“任务”</a>模块有一个强大的 Issue 全局视图，分成四种浏览模式。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082421.png" alt="img"></p>
+<blockquote>
+<ul>
+<li>指派给我的</li>
+<li>我发布的</li>
+<li>我参与的</li>
+<li>全部任务</li>
+</ul>
+</blockquote>
+<p>这是默认的列表视图，可以点击右上角，切换成全局的”看板视图”。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082439.png" alt="img"></p>
+<p>这个界面还可以直接新建任务，而不用进入仓库主页。新建任务时，允许指定”关联项目”、”负责人”和”预计工时”。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082422.jpg" alt="img"></p>
+<p>新建任务以后，还可以对任务进行再次编辑，这时可以设置”优先级”、”关联项目”和”子项目”等。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017082424.jpg" alt="img"></p>
+<p>我就介绍到这里了，接下来你可以点击进入 <a href="https://gitee.com/enterprises/demo" target="_blank" rel="noopener">Demo</a>，体验一下上面介绍的各项功能。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/项目管理/" rel="tag"># 项目管理</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/17/那些无用的人/" rel="next" title="(转载)那些无用的人">
+                <i class="fa fa-chevron-left"></i> (转载)那些无用的人
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="https://wx1.sinaimg.cn/mw1024/93e5a6afgy1fnhfdhk9g9j20p00gk76h.jpg"
+                alt="wonderful" />
+            
+              <p class="site-author-name" itemprop="name">wonderful</p>
+              <p class="site-description motion-element" itemprop="description">佛说无爱则欢 可无爱又怎能心安</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/wonderful5" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.jianshu.com/users/77793c638760/timeline" target="_blank" title="简书">
+                      
+                        <i class="fa fa-fw fa-vk"></i>简书</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、Issue-是什么？"><span class="nav-number">1.</span> <span class="nav-text">一、Issue 是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、Issue-跟踪管理系统"><span class="nav-number">2.</span> <span class="nav-text">二、Issue 跟踪管理系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、Github-Issues"><span class="nav-number">3.</span> <span class="nav-text">三、Github Issues</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-基本用法"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 基本用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-Assignee"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 Assignee</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-Labels"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 Labels</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-常用-Label"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 常用 Label</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-Milestone"><span class="nav-number">3.5.</span> <span class="nav-text">3.5 Milestone</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-全局视图"><span class="nav-number">3.6.</span> <span class="nav-text">3.6 全局视图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、看板功能"><span class="nav-number">4.</span> <span class="nav-text">四、看板功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-看板是什么？"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 看板是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-Github-的看板功能"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 Github 的看板功能</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、码云的-Issue-系统"><span class="nav-number">5.</span> <span class="nav-text">五、码云的 Issue 系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-新建-Issue"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 新建 Issue</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-看板功能"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 看板功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-企业版"><span class="nav-number">5.3.</span> <span class="nav-text">5.3 企业版</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wonderful</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'wonderful5',
+            repo: 'wonderful5.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: 'c5268ce514ba62ce1ec33c90c9f4c043c7ccd2df',
+            
+                client_id: 'bc397d84441834a5cbef'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("GulnQhVRPj7fGO8jejvfvJcD-gzGzoHsz", "YyNk6gHXUVLBH6tuMac7u274");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
